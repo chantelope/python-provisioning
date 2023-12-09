@@ -1,5 +1,5 @@
 from databricks_workspace.get import Get
-from databricks.sdk.service.jobs import Task, NotebookTask
+from databricks.sdk.service.jobs import Task
 
 class Create:
     
