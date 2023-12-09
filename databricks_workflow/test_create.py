@@ -6,12 +6,9 @@ def test_should_create_databricks_workflow_job(mocker):
     host = "http://adb-test-workspace.com"
     token = "dapi123"
     job_name = "test-workspace"
-    task_list = list()
     
-    task = Task(
-        task_key = "task_key"        
-    )
-    task_list.append(task)
+    task_key = "task-key"
+    task_list = Create.job_task(task_key)
     
     expected = CreateResponse(
         job_id = "job-1"
