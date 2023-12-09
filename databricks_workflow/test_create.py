@@ -19,3 +19,16 @@ def test_should_create_databricks_workflow_job(mocker):
     actual = Create.new_workflow_job(host, token, job_name, task_list)
     
     assert expected.job_id == actual.job_id
+    
+def test_should_create_databricks_job_task():
+       
+    task_key = "task-key"
+    expected = list()
+    task = Task(
+        task_key = task_key     
+    )
+    expected.append(task)
+    
+    actual = Create.job_task(task_key)
+    
+    assert expected == actual
